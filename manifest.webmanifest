@@ -1,0 +1,24 @@
+{
+  "name": "weekwise explained",
+  "short_name": "weekwise explained",
+  "description": "An animated explainer of weekwise, the pregnancy due date calculator: how an LMP or EDD becomes a due date, gestational age today, and a dated, cited week-by-week schedule of scan windows, ANC visits and Td doses — and why the record cannot leave your browser.",
+  "start_url": ".",
+  "scope": ".",
+  "display": "standalone",
+  "background_color": "#FAF3F0",
+  "theme_color": "#C4756B",
+  "icons": [
+    {
+      "src": "icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

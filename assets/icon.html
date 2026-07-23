@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { width: 100%; height: 100%; overflow: hidden; background: #201512; }
+  body { display: grid; place-items: center; }
+  /* 12% safe padding per side — the mark fills the middle 76vmin */
+  .mark { width: 76vmin; height: 76vmin; display: block; }
+</style>
+</head>
+<body>
+  <!-- three beads on a cocoa thread, the centre one blush: the weekwise "week strand" mark -->
+  <svg class="mark" viewBox="0 0 40 40" aria-hidden="true">
+    <path d="M4 25 C 13 16, 27 16, 36 25" fill="none" stroke="#A17E70" stroke-width="2.2"/>
+    <circle cx="9"  cy="21.4" r="4.2" fill="#A17E70"/>
+    <circle cx="20" cy="19.2" r="6"   fill="#E39C90" stroke="#C4756B" stroke-width="2"/>
+    <circle cx="31" cy="21.4" r="4.2" fill="none" stroke="#A17E70" stroke-width="2.2"/>
+  </svg>
+</body>
+</html>

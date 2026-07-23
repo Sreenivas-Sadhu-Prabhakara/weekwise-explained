@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<style>
+  :root {
+    --bg: #201512;        /* dark cocoa field */
+    --bg2: #2A1C17;
+    --card: #2C1E19;
+    --line: #4A342C;
+    --cream: #F2E4DE;
+    --soft: #CBB3AA;
+    --blush: #E39C90;
+    --blush-mid: #C4756B;
+    --thread: #A17E70;
+    --sans: system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans", sans-serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { width: 1200px; height: 630px; overflow: hidden; }
+  body {
+    position: relative;
+    background: radial-gradient(120% 130% at 30% 0%, #2A1C17 0%, #201512 62%);
+    font-family: var(--sans);
+    color: var(--cream);
+    -webkit-font-smoothing: antialiased;
+    font-variant-numeric: tabular-nums;
+  }
+  .frame {
+    position: absolute; inset: 0;
+    padding: 66px 80px;
+    display: flex; flex-direction: column; justify-content: space-between;
+  }
+  .brand { display: flex; align-items: center; gap: 22px; }
+  .brand svg { display: block; }
+  .wordmark { font-size: 52px; font-weight: 800; letter-spacing: -0.03em; }
+  .wordmark em { font-style: normal; font-weight: 650; color: var(--blush); }
+
+  .headline h1 {
+    font-size: 62px; font-weight: 800; letter-spacing: -0.03em; line-height: 1.1;
+    max-width: 20ch;
+  }
+  .headline h1 .hot { color: var(--blush); }
+  .headline p {
+    margin-top: 22px; font-size: 27px; font-weight: 500; color: var(--soft);
+    line-height: 1.36; max-width: 30ch;
+  }
+
+  /* the 40-bead week strand crossing the cocoa field */
+  .strand { width: 100%; height: 96px; display: block; }
+  .strand .thread { stroke: var(--thread); stroke-width: 2.4; fill: none; }
+  .strand .bead { fill: #2C1E19; stroke: var(--thread); stroke-width: 2; }
+  .strand .bead.past { fill: var(--thread); stroke: var(--thread); }
+  .strand .bead.now { fill: var(--blush); stroke: var(--blush-mid); stroke-width: 3; }
+  .strand .tag { fill: var(--blush); }
+  .strand .tagline { stroke: var(--thread); stroke-width: 1.5; }
+  .strand .nowlabel { fill: var(--blush); font: 800 24px var(--sans); }
+
+  .chips { display: flex; gap: 14px; }
+  .chip {
+    border: 1.6px solid var(--line); background: rgba(54,37,32,0.55);
+    border-radius: 999px; padding: 12px 22px;
+    font-size: 22px; font-weight: 650; color: var(--soft);
+  }
+  .chip.hot { border-color: var(--blush-mid); color: var(--blush); }
+</style>
+</head>
+<body>
+  <div class="frame">
+    <div class="brand">
+      <svg width="66" height="66" viewBox="0 0 40 40" aria-hidden="true">
+        <path d="M4 26 C 13 17, 27 17, 36 26" fill="none" stroke="#A17E70" stroke-width="2"/>
+        <circle cx="9"  cy="22.6" r="3.8" fill="#A17E70"/>
+        <circle cx="20" cy="20.4" r="5.4" fill="#E39C90" stroke="#C4756B" stroke-width="1.8"/>
+        <circle cx="31" cy="22.6" r="3.8" fill="none" stroke="#A17E70" stroke-width="2"/>
+      </svg>
+      <span class="wordmark">weekwise <em>explained</em></span>
+    </div>
+
+    <div class="headline">
+      <h1>Pregnancy due dates,<br><span class="hot">explained.</span></h1>
+      <p>From LMP + 280 days to a dated, cited schedule of scan windows and ANC visits — the arithmetic, animated.</p>
+    </div>
+
+    <!-- the strand: 40 beads, week 20 lit; milestone weeks tagged -->
+    <svg class="strand" viewBox="0 0 1040 96" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+      <!-- thread -->
+      <path class="thread" d="M20 58 H1020"/>
+      <!-- beads generated inline; step = 1000/39 ≈ 25.64 -->
+      <!-- past beads 0..19 -->
+      <g>
+        <circle class="bead past" cx="20" cy="58" r="7"/>
+        <circle class="bead past" cx="45.6" cy="58" r="7"/>
+        <circle class="bead past" cx="71.3" cy="58" r="7"/>
+        <circle class="bead past" cx="96.9" cy="58" r="7"/>
+        <circle class="bead past" cx="122.6" cy="58" r="7"/>
+        <circle class="bead past" cx="148.2" cy="58" r="7"/>
+        <circle class="bead past" cx="173.8" cy="58" r="7"/>
+        <circle class="bead past" cx="199.5" cy="58" r="7"/>
+        <circle class="bead past" cx="225.1" cy="58" r="7"/>
+        <circle class="bead past" cx="250.8" cy="58" r="7"/>
+        <circle class="bead past" cx="276.4" cy="58" r="7"/>
+        <circle class="bead past" cx="302.1" cy="58" r="7"/>
+        <circle class="bead past" cx="327.7" cy="58" r="7"/>
+        <circle class="bead past" cx="353.3" cy="58" r="7"/>
+        <circle class="bead past" cx="379" cy="58" r="7"/>
+        <circle class="bead past" cx="404.6" cy="58" r="7"/>
+        <circle class="bead past" cx="430.3" cy="58" r="7"/>
+        <circle class="bead past" cx="455.9" cy="58" r="7"/>
+        <circle class="bead past" cx="481.5" cy="58" r="7"/>
+        <circle class="bead past" cx="507.2" cy="58" r="7"/>
+      </g>
+      <!-- NOW bead: week 20 (index 20) at x = 20 + 20*25.64 = 532.8 -->
+      <line class="tagline" x1="532.8" y1="51" x2="532.8" y2="30"/>
+      <circle class="bead now" cx="532.8" cy="58" r="10.5"/>
+      <text class="nowlabel" x="532.8" y="92" text-anchor="middle">20+0</text>
+      <!-- upcoming beads 21..39, with milestone tags at 28 and 40 -->
+      <g>
+        <circle class="bead" cx="558.5" cy="58" r="7"/>
+        <circle class="bead" cx="584.1" cy="58" r="7"/>
+        <circle class="bead" cx="609.7" cy="58" r="7"/>
+        <circle class="bead" cx="635.4" cy="58" r="7"/>
+        <circle class="bead" cx="661" cy="58" r="7"/>
+        <circle class="bead" cx="686.7" cy="58" r="7"/>
+        <!-- week 28 (index 27) milestone tag: ANC-3 -->
+        <line class="tagline" x1="712.3" y1="51" x2="712.3" y2="34"/>
+        <circle class="tag" cx="712.3" cy="30" r="4.5"/>
+        <circle class="bead" cx="712.3" cy="58" r="7"/>
+        <circle class="bead" cx="738" cy="58" r="7"/>
+        <circle class="bead" cx="763.6" cy="58" r="7"/>
+        <circle class="bead" cx="789.2" cy="58" r="7"/>
+        <circle class="bead" cx="814.9" cy="58" r="7"/>
+        <circle class="bead" cx="840.5" cy="58" r="7"/>
+        <circle class="bead" cx="866.2" cy="58" r="7"/>
+        <circle class="bead" cx="891.8" cy="58" r="7"/>
+        <circle class="bead" cx="917.4" cy="58" r="7"/>
+        <circle class="bead" cx="943.1" cy="58" r="7"/>
+        <circle class="bead" cx="968.7" cy="58" r="7"/>
+        <circle class="bead" cx="994.4" cy="58" r="7"/>
+        <!-- week 40 (index 39) milestone tag: 40-week appt -->
+        <line class="tagline" x1="1020" y1="51" x2="1020" y2="34"/>
+        <circle class="tag" cx="1020" cy="30" r="4.5"/>
+        <circle class="bead" cx="1020" cy="58" r="7"/>
+      </g>
+    </svg>
+
+    <div class="chips">
+      <span class="chip">LMP + 280 → EDD</span>
+      <span class="chip">dated, cited windows</span>
+      <span class="chip hot">connect-src 'none'</span>
+      <span class="chip">free &amp; open source</span>
+    </div>
+  </div>
+</body>
+</html>
